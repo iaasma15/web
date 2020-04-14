@@ -1,0 +1,184 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>home page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body><header>
+		<nav>
+			<h1>Green House</h1>
+			<ul id="nav">
+				<li><a class="homeblack" href="home.html">HOME</a></li>
+				<li><a class="homered" href="aboutus.html">ABOUT PLANTS</a></li>
+				<li><a class="homeblack" href="#">CONTACT</a></li>
+				<li><a class="homeblack" href="#">FEEDBACK   </a></li>
+			</ul>
+		</nav>
+			
+		</nav>
+	</header>
+	<div class="divider"></div>
+	<div class="fullimg">
+	
+		<h2> GreenHouse Environment Analysis</h2>
+	<table width="100%" cellpadding="5" cellspacing="5" border="3" bordercolor="black" height="30%" position="absolute">
+		<tr>
+			<th>Temperature</th>
+			<th>Humidity</th>
+			<th>Soil Moisture</th>
+			<th>Water Level</th>
+			<th>Light Intensity</th>
+		</tr>
+		<tr>
+			<td bgcolor="blue"></td>
+			<td bgcolor="yellow"></td>
+			<td bgcolor="red"></td>
+			<td bgcolor="blue"></td>
+			<td bgcolor="yellow"></td>
+		</tr>
+		<tr>
+			<td bgcolor="pink"></td>
+			<td bgcolor="grey"></td>
+			<td bgcolor="yellow"></td>
+			<td bgcolor="red"></td>
+			<td bgcolor="green"></td>
+		</tr>
+		<tr>
+			<td bgcolor="black"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="grey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="red"></td>
+		</tr>
+	</table></div>
+
+
+
+
+
+
+	<script >
+		console.log("Reached");
+	
+		// Initialize Firebase
+/*var config = {
+    apiKey: "AIzaSyBGJfHyE1NaLrGcDWvKc3hBVman8dP2G0I",
+    authDomain: "greenhouse-3f9b0.firebaseapp.com",
+    databaseURL: "https://greenhouse-3f9b0.firebaseio.com",
+    projectId: "greenhouse-3f9b0",
+    storageBucket: "greenhouse-3f9b0.appspot.com",
+    messagingSenderId: "753340215729"
+};
+  firebase.initializeApp(config);*/
+			var rootRef = firebase.database().ref('Sensors').child('Humidity');
+			//rootRef.on("child_added", snap=> {
+				rootRef.on("value",readSnapshotFromFirebase);
+
+			function readSnapshotFromFirebase(snap) {
+					console.log("hello");
+			//c
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					var data = childsnap.val();
+					var date =childsnap.key;
+					console.log("hello1");
+
+					console.log("data:"+ data);
+			//var item = childSnapshot.val();
+			//item.key = childSnapshot.key;
+			//console.log(item);
+			//returnArr.push(item);
+
+			});
+		}
+
+
+
+				var rootRef = firebase.database().ref('Sensors').child('SoilMois');
+			//rootRef.on("child_added", snap=> {
+				rootRef.on("value",readSnapshotFromFirebase);
+
+			function readSnapshotFromFirebase(snap) {
+					console.log("hello");
+			//c
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					var data = childsnap.val();
+					var date =childsnap.key;
+					console.log("hello1");
+
+					console.log("data:"+ data);
+			//var item = childSnapshot.val();
+			//item.key = childSnapshot.key;
+			//console.log(item);
+			//returnArr.push(item);
+
+			});
+		}
+
+
+
+
+		var rootRef = firebase.database().ref('Sensors').child('Temperature');
+			//rootRef.on("child_added", snap=> {
+				rootRef.on("value",readSnapshotFromFirebase);
+
+			function readSnapshotFromFirebase(snap) {
+					console.log("hello");
+			//c
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					var data = childsnap.val();
+					var date =childsnap.key;
+					console.log("hello1");
+
+					console.log("data:"+ data);
+			//var item = childSnapshot.val();
+			//item.key = childSnapshot.key;
+			//console.log(item);
+			//returnArr.push(item);
+
+			});
+		}
+
+
+
+
+			var rootRef = firebase.database().ref('Sensors').child('WaterLevel');
+			//rootRef.on("child_added", snap=> {
+				rootRef.on("value",readSnapshotFromFirebase);
+
+			function readSnapshotFromFirebase(snap) {
+					console.log("hello");
+			//c
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					var data = childsnap.val();
+					var date =childsnap.key;
+					console.log("hello1");
+
+					console.log("data:"+ data);
+			//var item = childSnapshot.val();
+			//item.key = childSnapshot.key;
+			//console.log(item);
+			//returnArr.push(item);
+
+			});
+		}
+
+	</script>
+	<script>
+	function.write(Date());
+				</script>
+	<!--<script src ="plant1environment.js"></script>-->
+
+
+	</body>
+
+
+
+	
+
+</html>

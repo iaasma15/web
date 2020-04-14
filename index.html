@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title>Login Page</title>
+
+
+<!--Remember DontYou dare to touch or alter This --->
+<!-- No Go Area -->
+		
+		<!-- Firebase App is always required and must be first -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script> 
+
+		<!-- Add additional services you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script> 
+
+		<!--<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> --> <!-- Comment out (or don't include) services you don't want to use -->
+
+		<script src="Firebase-WebApp.js"></script>
+
+		<!--<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>-->
+
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" /> 
+		
+<!-- No Go Area -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+	<header>
+		<nav>
+			<h1>Green House</h1>
+			<ul id="nav">
+				<li><a class="homered" href="index.html">LOGIN</a></li>
+				<li><a class="homeblack" href="registration.html">REGISTRATION</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<div class="divider"></div>
+
+	<section class="loginsec">
+	<div class="loginbox">
+		<img src="default-avatar.jpg" class="avatar" />
+		<h1>Login Here</h1>
+		<p>User name</p>
+		<input type="text"  id = "LUsername" placeholder="Enter Username" />
+		<p>Password</p>
+		<input type="password"  id="LPassword" placeholder="Enter Password" />
+		<input type="button" id="Login1" onclick = "viewData()"   value="Login" />
+		
+		<a href="registration.html">Don't have an account?</a>
+	</div></section>
+<section class="green-panel">
+		<div class="wrapper">
+			<h1>Looking for A GreenHouse?</h1>
+			<p>Then Iot based Intelligent GreenHouse is for you!<br>It will save your time and energy...</p>
+			<a class="transparent" href="index.html">VIEW WEBSITE</a>
+		</div>
+	</section>
+	<footer>
+	<section class="info">
+		<div class="wrap">
+	<div class="text">
+		<h3 class="text1">GET IN TOUCH</h3>
+		<h4 class="p">If you would like to discuss our project, drop us a line or come and visit us.</h4>
+		<article class="links">
+			<a class="transparent" href="https://mail.google.com">E-MAIL US</a>
+		
+			  	<a class="transparent">+92 21 34988000</a>
+			  </article>
+			  <div class="address"><p>Sir Syed University Of Engineering And Technology</p></div>
+				    
+	</div> 
+			<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4799600715633!2d67.09062781462059!3d24.915714349177787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1541174672502" width="100%" height="100%" style="border:none;">...</iframe>
+				</div>
+				
+			</div>
+		</section>
+	
+				
+			</div>
+		</div>
+	</section>
+</footer>		
+		
+
+
+
+
+
+
+	</div>
+	</body>
+</html>

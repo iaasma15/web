@@ -1,0 +1,228 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Greenhouse</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script> 
+
+		<!--Add additional services you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script> 
+<!--
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> --> <!-- Comment out (or don't include) services you don't want to use -->
+
+		<script src="Firebase-WebApp.js"></script>
+
+		<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" /> 
+		
+<!-- No Go Area -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+	<header>
+		<nav>
+			<h1>Green House</h1>
+			<ul id="nav">
+				<li><a class="homeblack" href="newhome.html">HOME</a></li>
+				<li><a class="homeblack" href="aboutus.html">ABOUT PLANTS</a></li>
+				<li><a class="homeblack" href="appliance.html">APPLIANCES</a></li>
+				<li><a class="homeblack" href="contact.html">CONTACT</a></li>
+				<li><a class="homered" href="ourwork.html">OUR WORK</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="divider"></div>
+	<section class="greenvideo">
+
+		<video id="videoplayer" width="1000" height="500" controls= "controls"> 
+
+		<source id="mp4source" src="https://firebasestorage.googleapis.com/v0/b/greenhouse-3f9b0.appspot.com/o/videos%2FVideo13%3A38%3A32.h264?alt=media&token=38acd148-9117-4d5d-a1cf-a8a139af972d" type="video/mp4">
+			<source src="https://firebasestorage.googleapis.com/v0/b/greenhouse-3f9b0.appspot.com/o/videos%2FVideo21%3A57%3A4.h264?alt=media&token=df038f41-68f4-4562-a99a-1e6618ca81b5" type="video/mp4">
+
+
+		</video>
+
+		<script>
+
+		var Video13:38:32.h264Ref = storageRef.child('videos/Video13:38:32.h264.mp4');
+		Video13:38:32.h264Ref.getDownloadURL().then(function(url){
+			console.log("hello")
+			console.log(url)
+		})
+	</script>
+	<section class="VideosContainer">
+		<script>
+		
+		$VideosListContainer = $(".VideosContainer");
+		var getItemsFromFirebase = [];
+	
+		function addItemInList(){
+			getItemsFromFirebase.push(Item);
+			MakingList(getItemsFromFirebase);
+
+		}
+		function MakingList(){
+			for(i=0; i<getItemsFromFirebase.length;i++){
+				VideosListContainer.html(VideosListContainer.html() + "<div><span><b><i>" + getItemsFromFirebase[i] +"</b></i></span></div>");
+			}
+			addItemInList();
+		}
+
+
+
+		
+		
+
+</script>
+</section></section>
+
+<!--
+
+<button onclick="myFunction()" type="button">Change Video</button><br>
+ 
+<video id="myVideo" controls autoplay>
+  <source id="mp4_src" src="Video13:38:32.h264.mp4" type="video/mp4">
+  <source id="ogg_src" src="Video13:38:32.h264.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script> 
+	var Video13:38:32.h264Ref = storageRef.child('videos/Video13:38:32.h264.mp4');
+var vid = document.getElementById("myVideo");
+
+function myFunction() { 
+    isSupp = vid.canPlayType("video/mp4");
+    if (isSupp == "") {
+        vid.src = "videos/Video13:38:32.h264.ogg";
+    } else {
+        vid.src = "videos/Video13:38:32.h264.mp4";
+    }
+    vid.load();
+} 
+</script> -->
+<section class="greeen-panel" >
+	<div class="wrapper">
+<h1>Our GreenHouse</h1>
+<p>We’ve designed GreenHouse and We can control the Appliances automatically and Manually.Appliances used in GreenHouse are Fan,Bulb,Exhaust Fan,Motor and Valves.We can control the Environment through these Appliances.</p>
+
+<a id="buttongreenhousee" href="#greenhouse-page">view greenhouse</a>
+
+</div>
+
+</section>
+				
+
+
+	<section id="greenhouse-page" class="plant3-panel services-inside-panel">
+		<div class="wrapper">
+			<div class="text-services">
+				<h2> GREENHOUSE ENVIRONMENT ANALYSIS</h2>
+
+				<table width="100%" cellpadding="5" cellspacing="5" border="3" bordercolor="black" height="30%" position="absolute">
+		<tr>
+
+			<th>Readings</th>
+			<th>Time</th>
+			<th>Temperature</th>
+			<th>Humidity</th>
+			<th>Soil Moisture</th>
+			<th>WaterLevel</th>
+
+		</tr>
+		<tr>
+			<td bgcolor="transparent">Current</td>
+			<td id="Time"bgcolor="transparent"></td>
+			<td id="Temp" bgcolor="transparent"></td>
+			<td id="Humid" bgcolor="transparent"></td>
+			<td id="SoilMois" bgcolor="transparent"></td>
+			<td id="WaterLevel" bgcolor="transparent"></td>
+		</tr>
+		<tr>
+			<td bgcolor="transparent">To Maintain</td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+		</tr>
+		<tr>
+			<td bgcolor="transparent">Required for this plant</td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+		</tr>
+	</table>
+			</div>
+		</div>
+		<div class="ii4"></div>
+	</section>
+
+	<section class="green-panel">
+		<div class="wrapper">
+			<h1>Looking for A GreenHouse?</h1>
+			<p>Then Iot based Intelligent GreenHouse is for you!<br>It will save your time and energy...</p>
+			<a class="transparent" href="newhome.html">VIEW WEBSITE</a>
+		</div>
+	</section>
+
+
+	
+<footer>
+	<section class="info">
+		<div class="wrap">
+	<div class="text">
+		<h3 class="text1">GET IN TOUCH</h3>
+		<h4 class="p">If you would like to discuss our project, drop us a line or come and visit us.</h4>
+		<article class="links">
+			<a class="transparent" href="https://mail.google.com">E-MAIL US</a>
+		
+			  	<a class="transparent">+92 21 34988000</a>
+			  </article>
+			  <div class="address"><p>Sir Syed University Of Engineering And Technology</p></div>
+				    
+	</div> 
+			<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4799600715633!2d67.09062781462059!3d24.915714349177787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1541174672502" width="100%" height="100%" style="border:none;">...</iframe>
+				</div>
+				
+			</div>
+		</section>
+	
+				
+			</div>
+		</div>
+	</section>
+</footer>		
+		
+
+
+
+
+
+
+	</div>
+	</body>
+</html>

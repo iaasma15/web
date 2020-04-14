@@ -1,0 +1,171 @@
+
+<html>
+<head>
+	<title>Regstration form</title>
+
+<!--Remember DontYou dare to touch or alter This --->
+<!-- No Go Area -->
+		
+		<!-- Firebase App is always required and must be first -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script> 
+
+		<!-- Add additional services you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script> 
+
+		<!--<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> --> <!-- Comment out (or don't include) services you don't want to use -->
+
+
+		<!--<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>-->
+
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" /> 
+		
+<!-- No Go Area -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="Firebase-WebApp.js"></script>
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Green House</h1>
+			<ul id="nav">
+				<li><a  class="homeblack" href="index.html">LOGIN</a></li>
+				<li><a  class="homered" href="registration.html">REGISTRATION</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+
+	
+	<div id = "ProgressBar">
+		<div id ="red" class = "PB Black">
+			<div class = "PB Red">
+
+			</div>
+		</div>
+	</div>
+	<div id="WaitSignal">
+		<div id="WSText">
+			Text change through jquery coding.
+		</div>
+	</div>
+	<div class="divider"></div>
+	<section class="registration">
+		<div class="registrationform">
+			<img src="default-avatar.jpg" class="avatar">
+			<h1>Register Here</h1>
+
+	<table style="width:100%">
+		<tr>
+			<td>
+				Full Name:
+			</td>
+			<td>
+				<input type="text" placeholder="Enter Your Full Name" id="FullName">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Username:
+			</td>
+			<td>
+				<input type="text" placeholder="Enter a unique Username" id="Username">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Password:
+			</td>
+			<td>
+				<input type="Password" placeholder="Enter Your Password" id="Password">
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Email:
+			</td>
+			<td>
+				<input type="mail" placeholder="example@example.com" id="Email">
+			</td>	
+		</tr>
+		<tr>
+			<td>
+				Phone:
+			</td>
+			<td>
+				<select>
+					<option>+91</option>
+					<option selected>+92</option>
+					<option>+93</option>
+					<option>+94</option>
+					<option>+95</option>
+					<option>+96</option>
+					<option>+97</option>
+					<option>+98</option>
+					<option>+99</option>
+				</select>
+				<input type="Number" placeholder="" id="PhoneNum"><br>
+			</td></tr></table>
+			
+				<input type="button" id ="submit1" onclick={Register($moveRed,$getParentWidth,$getRedWidth,$RedWidthForFutureUse)} value="Register"/>
+	</div>
+
+	<script type="text/javascript">
+		var $moveRed = $('#red');
+		var $getParentWidth = parseInt($('#ProgressBar').css('width'));
+		var $getRedWidth = parseInt($moveRed.css('width'));
+		var $RedWidthForFutureUse = $getRedWidth;
+	</script>
+</section>
+<section class="green-panel">
+		<div class="wrapper">
+			<h1>Looking for A GreenHouse?</h1>
+			<p>Then Iot based Intelligent GreenHouse is for you!<br>It will save your time and energy...</p>
+			<a class="transparent" href="newhome.html">VIEW WEBSITE</a>
+		</div>
+	</section>
+	<footer>
+	<section class="info">
+		<div class="wrap">
+	<div class="text">
+		<h3 class="text1">GET IN TOUCH</h3>
+		<h4 class="p">If you would like to discuss our project, drop us a line or come and visit us.</h4>
+		<article class="links">
+			<a class="transparent" href="https://mail.google.com">E-MAIL US</a>
+		
+			  	<a class="transparent">+92 21 34988000</a>
+			  </article>
+			  <div class="address"><p>Sir Syed University Of Engineering And Technology</p></div>
+				    
+	</div> 
+			<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4799600715633!2d67.09062781462059!3d24.915714349177787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1541174672502" width="100%" height="100%" style="border:none;">...</iframe>
+				</div>
+				
+			</div>
+		</section>
+	
+				
+			</div>
+		</div>
+	</section>
+</footer>		
+		
+
+
+
+
+
+
+	</div>
+	</body>
+</html>

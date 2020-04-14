@@ -1,0 +1,629 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Greenhouse</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script> 
+
+		<!--Add additional services you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script> 
+<!--
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> --> <!-- Comment out (or don't include) services you don't want to use -->
+
+		<script src="Firebase-WebApp.js"></script>
+
+		<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" /> 
+		
+<!-- No Go Area -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+	<header>
+		<nav>
+			<h1>Green House</h1>
+			<ul id="nav">
+				<li><a class="homeblack" href="newhome.html">HOME</a></li>
+				<li><a class="homeblack" href="aboutus.html">ABOUT PLANTS</a></li>
+				<li><a class="homered" href="appliance.html">APPLIANCES</a></li>
+				<li><a class="homeblack" href="contact.html">CONTACT</a></li>
+				<li><a class="homeblack" href="ourwork.html">OUR WORK</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="divider"></div>
+	<!--<section class="greenhouseappliance">
+
+		<a id="fan" href="ourwork.html">fan on/off</a>
+		<a id="bulb" href="ourwork.html">bulb on/off</a>
+		<a id="exhaust-fan" href="ourwork.html">exhaust fan on/off</a>
+		<a id="motor" href="ourwork.html">motor on/off</a>
+		<a id="valve1" href="ourwork.html">valve1</a>
+		<a id="valve2" href="ourwork.html">valve2</a>
+		<a id="valve3" href="ourwork.html">valve3</a>
+		
+		<div class="app">
+			<h2 class ="gr">GREENHOUSE APPLIANCES</h2>
+		</div>
+
+
+
+
+		</section>-->
+		<section class="green-panel">
+	<div class="wrapper">
+<h1>GreenHouse Appliances</h1>
+<p>We’ve designed GreenHouse and We can control the Appliances automatically and Manually.Appliances used in GreenHouse are Fan,Bulb,Exhaust Fan,Motor and Valves.We can control the Environment through these Appliances.</p>
+
+<a id="buttongreenhousee" href="ourwork.html">view greenhouse</a>
+
+</div>
+
+</section>
+
+	<section class="green-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>FAN</h1>
+<p></p>
+<span id="fan" onClick = "Fan_On_Off()" >fan on/off</span></div>
+</div><br>
+<div class="fanbox"><span id = "FanStatus"></span></div>
+<div style="background-image: url('fan.jpg');" class="portfolio-img"></div>
+
+<script>
+	Fan();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Fan(){
+				var FanRef = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				FanRef.on("value",readFanSnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readFanSnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Fan"){
+						$("#FanStatus").text(childsnap.val());
+						console.log("hello1");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+
+			function Fan_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readFanStatus);
+				function readFanStatus(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Fan" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Fan");
+							firebase.database().ref('User Operations').child("Fan").set("ON");
+					}
+						else if(childsnap.key == "Fan" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Fan");
+							firebase.database().ref('User Operations').child("Fan").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+				
+								
+
+</script>
+
+
+
+
+
+
+</section>
+
+		<section class="purplee-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>LIGHT</h1>
+<span id="light" onClick = "Light_On_Off()" >light on/off</span>
+<br><br>
+<div class="lightbox"><span id = "LightStatus"></span></div></div>
+
+</div>
+<div style="background-image: url('bulb.jpg');" class="portfolio-img"></div>
+<script>
+	
+	Light();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Light(){
+				var LightRef = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				LightRef.on("value",readLightSnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readLightSnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Light"){
+						$("#LightStatus").text(childsnap.val());
+						console.log("hello2");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+			function Light_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readLightStatus);
+				function readLightStatus(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Light" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Light");
+							firebase.database().ref('User Operations').child("Light").set("ON");
+					}
+						else if(childsnap.key == "Light" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Light");
+							firebase.database().ref('User Operations').child("Light").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+				
+
+
+
+</script>
+
+
+</section>
+
+
+	<section class="orange-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>MOTOR</h1>
+<p></p>
+<span id="motor" onClick = "Motor_On_Off()">motor on/off</span></div>
+</div><br>
+<div class="box"><span id = "MotorStatus"></span></div>
+<div style="background-image: url('motor.jpg');" class="portfolio-img"></div>
+<script>
+	
+	Motor();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Motor(){
+				var MotorRef = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				MotorRef.on("value",readMotorSnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readMotorSnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Motor"){
+						$("#MotorStatus").text(childsnap.val());
+						console.log("hello2");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+
+			function Motor_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readMotorStatus);
+				function readMotorStatus(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Motor" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Motor");
+							firebase.database().ref('User Operations').child("Motor").set("ON");
+					}
+						else if(childsnap.key == "Motor" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Motor");
+							firebase.database().ref('User Operations').child("Motor").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+
+
+
+</script>
+
+
+
+
+
+
+</section>
+
+
+
+	<section class="blue-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>EXHAUST FAN</h1>
+<span id="exhaust-fan" onClick = "Exhaust_On_Off()">exhaust fan on/off</span>
+<br><br>
+<div class="box1"><span id = "ExhaustStatus"></span></div></div>
+</div>
+<div style="background-image: url('exhaust.jpg');" class="portfolio-img">&nbsp;</div>
+
+<script>
+	
+		Exhaust();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Exhaust(){
+				var ExhaustRef = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				ExhaustRef.on("value",readExhaustSnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readExhaustSnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Exhaust"){
+						$("#ExhaustStatus").text(childsnap.val());
+						console.log("hello2");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+
+			function Exhaust_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readExhaustStatus);
+				function readExhaustStatus(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Exhaust" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Exhaust");
+							firebase.database().ref('User Operations').child("Exhaust").set("ON");
+					}
+						else if(childsnap.key == "Exhaust" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Exhaust");
+							firebase.database().ref('User Operations').child("Exhaust").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+
+
+</script>
+
+
+
+
+
+
+</section>
+<section class="greyy-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>PLANT 1 VALVE</h1>
+<p></p>
+<span id="valve1" onClick = "Valve1_On_Off()">valve1</span></div>
+</div><br>
+<div class="valvebox"><span id = "Valve1Status"></span></div>
+<div style="background-image: url('solenoid.jpg');" class="portfolio-img"></div>
+
+<script>
+	
+	Valve1();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Valve1(){
+				var Valve1Ref = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				Valve1Ref.on("value",readValve1SnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readValve1SnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Valve1"){
+						$("#Valve1Status").text(childsnap.val());
+						console.log("hello2");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+
+
+			function Valve1_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readValve1Status);
+				function readValve1Status(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Valve1" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Valve1");
+							firebase.database().ref('User Operations').child("Valve1").set("ON");
+					}
+						else if(childsnap.key == "Valve1" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Valve1");
+							firebase.database().ref('User Operations').child("Valve1").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+
+
+</script>
+
+
+
+
+</section>
+
+	<section class="green-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>PLANT 2 VALVE</h1>
+<p></p>
+<span id="valve2" onClick = "Valve2_On_Off()">valve2</span>
+<br><br>
+<div class="box1"><span id = "Valve2Status"></span></div></div>
+</div>
+<div style="background-image: url('solenoid.jpg');" class="portfolio-img"></div>
+
+<script>
+	
+	Valve2();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Valve2(){
+				var Valve2Ref = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				Valve2Ref.on("value",readValve2SnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readValve2SnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Valve2"){
+						$("#Valve2Status").text(childsnap.val());
+						console.log("hello2");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+
+			function Valve2_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readValve2Status);
+				function readValve2Status(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Valve2" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Valve2");
+							firebase.database().ref('User Operations').child("Valve2").set("ON");
+					}
+						else if(childsnap.key == "Valve2" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Valve2");
+							firebase.database().ref('User Operations').child("Valve2").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+
+
+</script>
+
+
+
+
+
+</section>
+<section class="purplee-panel portfolio-inside-panel">
+<div class="wrapper">
+<div class="text-portfolio">
+<h1>PLANT 3 VALVE</h1>
+<p></p>
+<span id="valve3" onClick = "Valve3_On_Off()">valve3</span></div>
+</div><br>
+<div class="box"><span id = "Valve3Status"></span></div>
+<div style="background-image: url('solenoid.jpg');" class="portfolio-img"></div>
+
+<script>
+	
+	Valve3();
+			//var UserOp = firebase.database().ref('User Operations');
+
+			function Valve3(){
+				var Valve3Ref = firebase.database().ref('User Operations');
+  				console.log("Reached Fan");
+				console.log("reach");
+				console.log("rrreach");
+				Valve3Ref.on("value",readValve3SnapshotFromFirebase);
+				console.log("hh");
+
+  			}
+
+			function readValve3SnapshotFromFirebase(snap) {
+				snap.forEach(function(childsnap){
+					if(childsnap.key == "Valve3"){
+						$("#Valve3Status").text(childsnap.val());
+						console.log("hello2");
+						//console.log("Fan:"+ Fan);
+					}
+				});
+			}
+
+			function Valve3_On_Off(){
+				var UserOp = firebase.database().ref('User Operations');
+				console.log()
+				UserOp.once("value",readValve3Status);
+				function readValve3Status(snap){
+					snap.forEach(function(childsnap){
+						if(childsnap.key == "Valve3" && childsnap.val()=="OFF"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Valve3");
+							firebase.database().ref('User Operations').child("Valve3").set("ON");
+					}
+						else if(childsnap.key == "Valve3" && childsnap.val()=="ON"){
+							firebase.database().ref('User Operations').child("Operation ID").set("Valve3");
+							firebase.database().ref('User Operations').child("Valve3").set("OFF");
+									}
+								
+								});
+							}
+						}
+
+
+
+</script>
+
+
+
+
+</section>
+		
+	
+
+
+
+	<section id="greenhouse-page" class="plant3-panel services-inside-panel">
+		<div class="wrapper">
+			<div class="text-services">
+				<h2> GREENHOUSE ENVIRONMENT </h2>
+
+				<table width="100%" cellpadding="5" cellspacing="5" border="3" bordercolor="black" height="30%" position="absolute">
+		<tr>
+
+			<th>Readings</th>
+			<th>Time</th>
+			<th>Temperature</th>
+			<th>Humidity</th>
+			<th>Soil Moisture</th>
+			<th>WaterLevel</th>
+
+		</tr>
+		<tr>
+			<td bgcolor="transparent">Current</td>
+			<td id="Time"bgcolor="transparent"></td>
+			<td id="Temp" bgcolor="transparent"></td>
+			<td id="Humid" bgcolor="transparent"></td>
+			<td id="SoilMois" bgcolor="transparent"></td>
+			<td id="WaterLevel" bgcolor="transparent"></td>
+		</tr>
+		<tr>
+			<td bgcolor="transparent">To Maintain</td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+		</tr>
+		<tr>
+			<td bgcolor="transparent">Required for this plant</td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+		</tr>
+	</table>
+			</div>
+		</div>
+		<div class="ii4"></div>
+	</section>
+
+	<section class="green-panel">
+		<div class="wrapper">
+			<h1>Looking for A GreenHouse?</h1>
+			<p>Then Iot based Intelligent GreenHouse is for you!<br>It will save your time and energy...</p>
+			<a class="transparent" href="newhome.html">VIEW WEBSITE</a>
+		</div>
+	</section>
+
+
+<footer>
+	<section class="info">
+		<div class="wrap">
+	<div class="text">
+		<h3 class="text1">GET IN TOUCH</h3>
+		<h4 class="p">If you would like to discuss our project, drop us a line or come and visit us.</h4>
+		<article class="links">
+			<a class="transparent" href="https://mail.google.com">E-MAIL US</a>
+		
+			  	<a class="transparent">+92 21 34988000</a>
+			  </article>
+			  <div class="address"><p>Sir Syed University Of Engineering And Technology</p></div>
+				    
+	</div> 
+			<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4799600715633!2d67.09062781462059!3d24.915714349177787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1541174672502" width="100%" height="100%" style="border:none;">...</iframe>
+				</div>
+				
+			</div>
+		</section>
+	
+				
+			</div>
+		</div>
+	</section>
+</footer>		
+		
+
+
+
+
+
+
+	</div>
+	</body>
+</html>

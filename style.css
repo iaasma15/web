@@ -1,0 +1,1721 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+a{
+	text-decoration: none;
+	color: white;
+}
+body{
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+}
+header{
+	text-decoration: none;
+	background:white;
+	color:#515151;
+	padding:8px 0px 6px 40px;
+	height:45px  ;
+}
+header a{
+	text-decoration: none;
+}
+header h1{
+	text-transform: uppercase;
+	display: inline;
+	font-family: "Oswald",sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: #9dcf32;
+	float: left;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+//tr{
+	display: grid;
+}
+//td{
+	color: #fff;
+}
+nav ul{
+	display:inline;
+	padding: 0px;
+	float:left ;
+}
+nav ul li{
+	display:inline-block;
+	list-style-type: none;
+	color: #515151;
+	float:left;
+	margin-left: 12px;
+}
+nav ul li a{
+	color:#515151;
+	text-decoration: none;
+}
+#nav{
+	font-family: 'Montserrat', sans-serif;
+}
+.homered {
+	background-color: 9dcf32;
+	color:white;
+	padding: 30px 10px 16px 10px;
+}
+.divider {
+	background-color: 9dcf32;
+	height: 5px;
+}
+.homeblack{
+	padding: 30px 10px 16px 10px;
+	font-weight: 1000;
+}
+.homered{
+	padding: 30px 10px 16px 10px;
+	font-weight: 1000;
+}
+#nav li a{
+	padding: 30px 20px 16px 20px;
+}
+
+.homeblack:hover {
+	background-color: White;
+	color: 9dcf32;
+	padding: 30px 10px 16px 10px;
+}
+.fullimg {
+	background-image: url(hhs.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;50
+	margin: 0;
+	padding: 0;
+}
+
+.loginsec{
+	font-family: "museo-sans-rounded",sans-serif;
+	width: 1163px;
+	height: 550px;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: #714c91;
+    text-align: left;
+    color: white;
+}
+
+
+
+
+.loginbox {
+	font-family: "museo-sans-rounded",sans-serif;
+	background-image: url(default-avatar.jpg);
+	width: 400px;
+	height: 450px;
+	background: transparent;
+	color: white;
+	top: 55%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+}
+.avatar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+
+}
+#ProgressBar{
+	opacity: 0;
+	width: 220px;
+	height: 1.1%;
+	position: absolute;
+	top: 05%;
+	right: 06%;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 10px;
+}
+.Black{
+	position: fixed;
+	width: 30px;
+	height: 1.1%;
+	background-color: rgba(255,0,0,1);
+	border-radius: 10px;
+
+}
+.Red{
+	position: fixed;
+	width: 30px;
+	height: 1.1%;
+//	background-color: yellow;	
+}
+#WaitSignal{
+	opacity: 0;
+	width: 290px;
+	height: 6%;
+	position: absolute;
+	top: 01%;
+	color:white;
+	right: 06%;
+	padding:0px 7px;
+	padding-bottom: 18px;
+	background-color: rgba(255,0,0,1);
+	border-radius: 5px;
+}
+.loginbox h1 {
+	font-family:"museo-sans-rounded",sans-serif;
+	text-transform: uppercase;
+    font-weight: 700;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 0.04em;
+    display: block;
+    font-size: 30px;
+    color: white;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+}
+.loginbox p{
+	font-family: "museo-sans-rounded",sans-serif;
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.loginbox input{
+	width:100%;
+	margin-bottom: 20px;
+}
+.loginbox input[type="text"]
+{
+	border:none;
+	border-bottom: 1px solid white;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.loginbox input[type="password"]
+{
+	border:none;
+	border-bottom: 1px solid white;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: white;
+	font-size: 16px;
+}
+
+
+
+.loginbox input[type="button"]
+{
+	background: transparent;
+    border-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    box-shadow: inset 0 0 0 2px white;
+}
+
+.loginbox input[type="button"]:hover
+{
+	background-color: white;
+	cursor: pointer;
+	color: #714c91;
+	box-shadow: inset 0 0 0 2px transparent;
+
+}
+.loginbox a{
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 20px;
+	color: white;
+}
+.loginbox a:hover
+{
+	cursor: pointer;
+	color: #9dcf32;
+}
+.textOverImage{
+	position: relative;
+	width: 250px;
+	height: 250px;
+	margin-left: 10px;
+	float: left;
+	margin: 67px;
+	margin-top: 10%;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0;
+}
+.textOverImage:hover{
+	background-size: 150%;
+
+}
+.textOverImage:after{
+	position: absolute;
+	top: 90%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	white-space: pre-wrap;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.3);
+	color: #fff;
+	padding:0 8px;
+	content: attr(data-text);
+}
+.textOverImage:hover:after{
+	top: 0;
+	padding: 8px;
+	background-color: rgba(0,0,0,0.6);
+}
+.textOverImage:first-line{
+	color: #fff;
+	font-weight:bold;
+	font-size: 1.5em;
+}
+
+.registration{
+	width: 1163px;
+	height: 700px;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: #f0f0f0;
+    text-align: left;
+    color: #515151;
+}
+
+
+
+.registrationform {
+	background-image: url(default-avatar.jpg);
+	width: 600px;
+	height: 600px;
+	background: transparent;
+	color: #515151;
+	top: 55%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+}
+.registrationform h1 {
+	font-family:"museo-sans-rounded",sans-serif;
+	text-transform: uppercase;
+    font-weight: 700;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 0.04em;
+    display: block;
+    font-size: 30px;
+    color: #515151;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+}
+.registrationform  input{
+	width:100%;
+	margin-bottom:8px;
+}
+
+.registrationform input[type="text"]
+{
+	border:none;
+	border-bottom: 1px solid #515151;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.registrationform input[type="password"]
+{
+	border:none;
+	border-bottom: 1px solid #515151;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.registrationform input[type="button"]
+{
+	width: 550px;
+	text-transform: uppercase;
+	background: transparent;
+    border-color: transparent;
+    color: #515151;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    box-shadow: inset 0 0 0 2px #515151;
+}
+
+.registrationform input[type="button"]:hover
+{
+	background-color: #9dcf32;
+	cursor: pointer;
+	color: white;
+	box-shadow: inset 0 0 0 2px transparent;
+
+}
+
+
+.carousel, ul{
+	
+	//height: 700px;
+}
+.carousel{
+	position: relative;
+	width: 1000px;
+	//margin: auto;
+	height: 700px;
+	overflow: hidden;
+	//margin-top: 200px;
+	box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+}
+.carousel li{
+	display: inline-block;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0;
+	height: 100%;
+	float: left;
+	position: relative;
+	width: 1000px;
+
+}
+.carousel ul{
+	position: absolute;
+	left: 0;
+	top: -15px;
+	width:9000px;
+	list-style: none;
+	margin-left: -40px;
+	transition:left .3s linear;
+	-moz-transition:left .3s linear;
+	-webkit-transition:left .3s linear;
+}
+.carousel container{
+	margin: 0 auto;
+	padding: 0;
+	width: 750px;
+}
+carousel-container img{
+	width: 100%;
+	padding: 0;
+}
+.carousel ul{
+	animation:slide-animation 15s infinite;
+}
+.carousel ul:hover{
+	animation-play-state: paused;
+}
+@keyframes slide-animation{
+20%{left: 0}
+25%{left: -1000px}
+45%{left: -1000px}
+50%{left: -2000px}
+70%{left: -2000px}
+75%{left: -3000px}
+98%{left: -3000px}
+100%{left: 0}
+}
+.portfolio {
+	background-image: url(image/port.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+.homesub{
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 9% 5% 0% 55%;
+	font-size: 18px;
+	color: yellow;
+}
+.homedes{
+	font-family:'Raleway', sans-serif; 
+	margin:0;
+	margin-left: 10%;
+	font-size: 75px;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	display: inline-block;
+}
+.homepho{
+	font-family: 'Oswald',sans-serif;
+	margin: 0;
+	margin-left: 10%;
+	font-size: 64px;
+	color: black;
+	display: inline-block;
+}
+.buttonhome{
+	margin: 0;
+	margin-left: 10%;
+	background: yellow;
+	color: white;
+	border: none;
+	height: 100px;
+	font-size: 2.1em;
+	padding: 0;
+	cursor: pointer;
+	outline-style: none;
+	font-family: 'Raleway',sans-serif;
+	font-weight: 900;
+	list-style-type: none;
+
+}
+#UserDetail{
+	float: right;
+}
+#UDChild{
+
+	display: inline-flex;
+}
+#UDChild div{
+	padding: 10px;
+}
+#UserDetail a{
+	padding:17px;
+
+}
+.serv .curser #view {
+	text-align: center;
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 14px;
+    display: block;
+    bottom: 40px;
+    left: 60px;
+    right: 900px;
+    margin-left: 50px;
+    position: absolute;
+    width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0px;
+    margin: 0 auto;
+    text-decoration: none !important;
+
+}
+.serv .curser #view:hover{
+	background:rgba(0,0,0,0.5);
+}
+
+.serv .curser1 #view1 {
+	text-align: center;
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 14px;
+    display: block;
+    bottom: 40px;
+    left:100px;
+    right: 110px;
+    margin-left: 50px;
+    position: absolute;
+    width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0px;
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+.serv .curser1 #view1:hover{
+	background:rgba(0,0,0,0.5);
+}
+.serv .curser2 #view2 {
+	text-align: center;
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 14px;
+    display: block;
+    bottom: 40px;
+    left: 750px;
+    right: 0px;
+    margin-left: 50px;
+    position: absolute;
+    width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0px;
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+.serv .curser2 #view2:hover{
+	background:rgba(0,0,0,0.5);
+}
+.fullgreenhouse input[type="button"]
+{
+	font-family: "museo-sans-rounded",sans-serif;
+	font-weight: 300;
+	border: none;
+	outline: none;
+	height: 60px;
+	width: 250px;
+	background: #9dcf32;
+	color: #515151;
+	font-size: 18px;
+	border-radius: 20px;
+	position: absolute;
+	left: 41%;
+	top: 70%;
+}
+.fullgreenhouse input[type="button"]:hover
+{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+.fullgreenhouse a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+.fullgreenhouse a:hover
+{
+	color: #ffc107;
+}
+.contactus-panel{
+	width: 1163px;
+	height: 500px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: #714c91;
+    text-align: left;
+    color: white;
+}
+
+
+.con{
+	font-family: "museo-sans-rounded",sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 0.04em;
+    display: block;
+	margin: 0%;
+	padding:5% 5% 0% 35%;
+	font-size: 40px;
+	color: #fff;
+}
+.tact{
+	font-family: "museo-sans-rounded",sans-serif;
+	margin: 0%;
+	display: block;
+	font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+	padding:0% 5% 0% 30%;
+	color: #fff;
+}
+form{
+	margin-top: 50px;
+	padding: 0% 5% 0% 25%;
+}
+.form-control{
+	width: 600px;
+	background: #fff;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 16px;
+}
+input{
+	height: 45px;
+}
+form .submit{
+	background: transparent;
+	border-color: transparent;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	margin-top: 20px;
+	box-shadow: inset 0 0 0 2px #fff;
+}
+form .submit:hover{
+	background-color: #fff;
+	cursor: pointer;
+	color: #714c91;
+	box-shadow: inset 0 0 0 2px transparent;
+
+}
+
+//#sidebar{
+	padding: 10px;
+	height: 900px;
+	width: 20%;
+	background-color: #f6f6f6;
+	float: right;
+
+}
+
+.tempread{
+	width: 1000px;
+	margin: 50px;
+	display: relative;
+}
+.tempread .temp1{
+	margin: 0;
+	width: 25%;
+	float: left;
+}
+.tempread .temp1 .chart{
+	position: relative;
+	width: 110px;
+	height: 110px;
+	margin: 0 ;
+	text-align: center;
+	font-size: 30px;
+	line-height: 110px;
+	color: white;
+
+}
+.tempread .temp1 canvas{
+	margin: 0;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+//.sub{
+	margin: 0;
+	padding-top: 0;
+	padding: 30px;
+	font-family: sans-serif;
+	font-size: 50px;
+
+}
+#main{        
+	margin: 50;
+	margin-top: 40px;
+	padding: 30px 0 30px 0;
+	background: #FFF;
+	font-family: "museo-sans-rounded",sans-serif;
+	clear: both;
+	width: 990px;
+	height: 900px;
+	text-align: left;
+	}
+
+.maindes{
+	
+    width: 1163px;
+    height: 800px;
+    display: inline-block;
+    margin: 0 auto;
+    background: url(hh.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    font-family: "museo-sans-rounded",sans-serif;
+
+
+    }
+.maindes .border{
+	width: 830px;
+    height: 400px;
+    padding: 0;
+    margin-top: 205px;
+    margin-right: 166.5;
+    margin-bottom: 205px;
+    margin-left: 166.5px;
+    box-shadow: inset 0 0 0 6px #fff;
+    color: #fff;
+    display: table;
+    text-align: center;
+    font-size: 44px;
+    font-family: "museo-sans-rounded",sans-serif;
+}
+.maindes .border article {
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 72px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 25% 0 0 0;
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+.maindes .border article a {
+	font-family: "museo-sans-rounded",sans-serif;
+    margin-top: 44px;
+    display: block;
+    width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+}
+.maindes .border article img {
+    width: auto;
+    border-style: none;
+}
+
+.maindes .border #scroll-down {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    margin-left: -25px;
+}
+.maindes .border #buttongreenhouse {
+	text-align: center;
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 14px;
+    display: block;
+    bottom: 30px;
+    left:60px;
+    right: 50px;
+    margin-left: 50px;
+    position: absolute;
+    width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0px;
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+#currentfield{
+	margin: 50;
+	margin-top: 40px;
+	padding: 30px 0 30px 0;
+	width: 1163px;
+	height: 538px;
+	position: relative;
+    margin-bottom: 50px;
+    display: inline-block;
+    background-size: cover;
+    background: url(services.jpg) no-repeat left top;
+}
+.showpie {
+    width: 990px;
+    position: relative;
+    z-index: 50;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.showpie h2{
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 40px;
+	text-align: center;
+    letter-spacing: 0.04em;
+    line-height: 116%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px 0;
+}
+.des {
+    display: block;
+    margin-top: 20px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.cur{
+	font-family: "museo-sans-rounded",sans-serif;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+	text-transform: uppercase;
+	margin:0;
+	display: block;
+	margin-inline-start:0px;
+	margin-inline-end:0px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #515151;
+
+}
+
+.info{
+	width: 1163px;
+	height: 408px;
+	margin: 50;
+	margin-top: 40px;
+	padding: 30px 0 30px 0;
+	margin-bottom: 30px;
+	display: inline-block;
+    position: relative;
+    background: #515151;
+    color: #fff;
+    font-family: "museo-sans-rounded",sans-serif;
+    text-align: center;
+}
+.wrap{
+	width: 990px;
+	margin: 0 auto;
+	padding: 0;
+}
+.text{
+	display: block;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+	width: calc(100% / 2.4);
+}
+.info .wrap {
+    text-align: left;
+}
+.info .text1{
+	margin:0;
+	letter-spacing: 0.04em;
+	padding:0 0 15px 0;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 40px;
+}
+.text1{
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+	font-family: "museo-sans-rounded",sans-serif;
+	display: block;
+	font-weight: bold;
+
+
+}
+.info .p{ 
+	color: white;
+	letter-spacing: 0.04em;
+	font-weight: 300;	
+    font-size: 20px;
+    line-height: 150%;
+}
+.p{
+	font-family: "museo-sans-rounded",sans-serif;
+	display: block;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start:0;
+    margin-inline-end:0;
+}
+.info .links {
+	margin: 58px 0 74px 0;
+	display: block;
+
+}
+.info .links a {
+	font-size: 19px;
+	display: inline-block;
+	width: 172px;
+	margin: 0 25px 0 0;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    padding: 8px 0;
+}
+.links a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+.info .address{
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+	letter-spacing: 0.015em;
+}
+.info .p{
+	font-weight: 300;
+
+}
+.address{
+	display: block;
+    font-weight: 300;
+    color: #fff;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.serv{
+	margin: 50;
+	margin-top: 40px;
+	padding: 30px 0 30px 0;
+	width: 1163px;
+	height: 538px;
+	position: relative;
+    margin-bottom: 50px;
+    display: inline-block;
+    background-size: cover;
+    background-color: #714c91;
+}
+
+.purple-panel{
+	width: 1163px;
+	height: 298px;
+	background: #f0f0f0;
+	font-size: 18px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50 ;
+    color: #515151;
+}
+table{
+	font-family: "museo-sans-rounded",sans-serif;
+	color: #515151;
+	border: white;
+}
+table th{
+	color: #515151;
+	width:100;
+	height: 36; 
+}
+.services-inside-panel {
+    padding-bottom: 70px;
+    position: relative;
+    width: 1163px;
+    height: 316px;
+}
+.grey-panel{
+	margin-bottom: 50px;
+	padding: 40px 0 70px 0;
+	font-size: 18px;
+	margin: 50;
+	display: inline-block;
+	background:#f0f0f0;
+	text-align: left;
+	color: #515151;
+}
+.wrapper{
+	width: 990px;
+	margin: 0 auto;
+	padding: 0;
+}
+//.services-inside-panel:nth-of-type(3) .text-services {
+    display: inline-block;
+    text-align: left;
+}
+
+.services-inside-panel .text-services{
+	width: calc(100% / 1.7);
+}
+.services-inside-panel .iii{
+	width: calc(100% / 2.5);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(tom.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+.blue-panel{
+	margin-bottom: 50px;
+	padding: 40px 0 70px 0;
+	font-size: 18px;
+	margin: 50;
+	display: inline-block;
+	background: #f0f0f0;
+	text-align: left;
+	color: #515151;
+}
+.services-inside-panel .ii2{
+	width: calc(100% / 2.5);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(p.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+.services-inside-panel .ii3{
+	width: calc(100% / 2.5);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(p.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+.green-panel{
+	width: 1163px;
+	height: 252px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: #9dcf32;
+    text-align: left;
+    color: #fff;
+	font-family: "museo-sans-rounded",sans-serif;
+
+}
+.wrapper {
+    width: 990px;
+    margin: 0 auto;
+    padding: 0;
+}
+.green-panel h1{
+	text-transform: uppercase;
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    display: block;
+    margin:0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+.green-panel p {
+    margin: 0 0 34px 0;
+    letter-spacing: 0.032em;
+    font-size: 25px;
+    line-height: 145%;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+.transparent{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+}
+.transparent a:hover{
+	color: #fff;
+}
+.transparent:hover{
+	background:rgba(0,0,0,0.5);
+}
+.info .map{
+	width: calc(100% / 2.39);
+	height: 100%;
+	position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+
+}
+.greenvideo{
+	width: 1163px;
+	height: 500px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: white;
+    text-align: left;
+    color: #fff;
+	font-family: "museo-sans-rounded",sans-serif;
+
+}
+.greeen-panel{
+	width: 1163px;
+	height: 252px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: #20acda;
+    text-align: left;
+    color: #fff;
+	font-family: "museo-sans-rounded",sans-serif;
+
+}
+.greeen-panel h1{
+	text-transform: uppercase;
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    display: block;
+    margin:0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+.greeen-panel p {
+    margin: 0 0 34px 0;
+    letter-spacing: 0.032em;
+    font-size: 25px;
+    line-height: 145%;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+#videoplayer{
+	margin-left: 80px; 
+	margin-top: 20px;
+	position: center;
+}
+.plant3-panel{
+	width: 1163px;
+	height: 252px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: #f0f0f0;
+    text-align: left;
+    color: #515151;
+	font-family: "museo-sans-rounded",sans-serif;
+
+}
+.services-inside-panel .ii4{
+	width: calc(100% / 2.5);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(bb.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+#fan{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+
+
+}
+#fan:hover{
+	    background: rgba(0,0,0,0.5);
+
+}
+#light{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+
+}
+#light:hover{
+	    background: rgba(0,0,0,0.5);
+}
+#valve3{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+
+}
+#valve3:hover{
+	    background: rgba(0,0,0,0.5);
+}
+
+#valve2{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+
+}
+#valve2:hover{
+	    background: rgba(0,0,0,0.5);
+}
+
+#valve1{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 0 2px #515151;
+   color: #515151;
+
+}
+
+#valve1:hover{
+	background: #9dcf32;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #9dcf32;
+}
+
+
+#motor{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+
+}
+#motor:hover{
+	    background: rgba(0,0,0,0.5);
+}
+
+#exhaust-fan{
+	width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "museo-sans-rounded",sans-serif;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+
+}
+
+#exhaust-fan:hover{
+	    background: rgba(0,0,0,0.5);
+}
+//.greenhouseappliance{
+	width: 1163px;
+	height: 500px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50;
+    display: inline-block;
+    position: relative;
+    background: grey;
+    text-align: left;
+    color: #f0f0f0;
+	font-family: "museo-sans-rounded",sans-serif;
+
+}
+//.greenhouseappliance .app{
+	font-size: 30px;
+    margin-bottom: 400px;
+    display: inline-block;
+    position: relative;
+    background: #f0f0f0;
+    text-align: left;
+    color: #515151;
+	font-family: "museo-sans-rounded",sans-serif;
+
+}
+//.gr{
+	position: center;
+	margin: 0;
+	margin-bottom: 0px;
+	position: relative;
+}
+.portfolio-inside-panel{
+	padding-bottom: 70px;
+	position: relative;
+}
+
+.portfolio-inside-panel:nth-of-type(odd) .text-portfolio {
+    display: inline-block;
+    text-align: left;
+}
+.portfolio-inside-panel:nth-of-type(odd) .wrapper {
+    text-align: right;
+    }
+.portfolio-inside-panel .text-portfolio {
+    width: calc(100% / 2.3);
+    padding: 0;
+}
+
+
+
+.portfolio-inside-panel h1 {
+    line-height: 120%;
+    padding: 0 0 30px 0;
+}
+
+.portfolio-inside-panel .portfolio-img{
+	width: calc(100% / 2);
+	height: 100%;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+
+.purplee-panel{
+	width: 1163px;
+	height: 298px;
+	background: #714c91;
+	font-size: 18px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50 ;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    font-family: "museo-sans-rounded",sans-serif;
+
+}
+
+
+.portfolio-inside-panel:nth-of-type(odd) .portfolio-img {
+    left: 0;
+    right: auto;
+    
+}
+
+
+
+.purplee-panel h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+    display: block;
+}
+
+
+.orange-panel{
+	width: 1163px;
+	height: 224px;
+	background: #ffa200;
+	font-size: 18px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50 ;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    font-family: "museo-sans-rounded",sans-serif;
+
+}
+
+
+
+.blue-panel h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+    display: block;
+}
+.orange-panel h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+    display: block;
+}
+.blue-panel{
+	width: 1163px;
+	height: 224px;
+	background: #20acda;
+	font-size: 18px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50 ;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    font-family: "museo-sans-rounded",sans-serif;
+
+}
+.greyy-panel{
+	width: 1163px;
+	height: 224px;
+	background: #f0f0f0;
+	font-size: 18px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50 ;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    font-family: "museo-sans-rounded",sans-serif;
+
+}
+.greyy-panel h1 {
+	font-size: 40px;
+	font-family: "museo-sans-rounded",sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #515151;
+    display: block;
+
+}
+.box{
+	margin-left: 180px;
+	border: 2px solid;
+	width:100px;
+	height:30px;
+	color: white;
+
+}
+.lightbox{
+	margin-left: 90px;
+	border: 2px solid;
+	width:100px;
+	height:30px;
+	color: white;
+}
+.box1{
+	margin-left: 90px;
+	border: 2px solid;
+	width:100px;
+	height:30px;
+	color: white;
+
+}
+.fanbox{
+	margin-left: 180px;
+	border: 2px solid;
+	width:100px;
+	height:30px;
+	color: white;
+
+}
+.valvebox{
+	margin-left: 180px;
+	border: 2px solid;
+	width:100px;
+	height:30px;
+	color: #515151;
+
+}
+#buttongreenhousee {
+	text-align: center;
+	font-family: "museo-sans-rounded",sans-serif;
+	font-size: 14px;
+    display: block;
+    bottom: 10px;
+    left:60px;
+    right: 50px;
+    margin-left: 50px;
+    position: absolute;
+    width: 285px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.08em;
+    background: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0px;
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+#buttongreenhousee:hover{
+	 background: rgba(0,0,0,0.5);
+
+}
+.or
+{
+	width: 1163px;
+	height: 680px;
+	background: #f1f1f1;
+	font-size: 18px;
+	margin-bottom: 50px;
+    padding: 40px 0 70px 0;
+    font-size: 18px;
+    margin: 50 ;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    font-family: "museo-sans-rounded",sans-serif;
+
+}
+
+}

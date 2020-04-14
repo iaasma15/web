@@ -1,0 +1,194 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script> 
+
+		<!-- Add additional services you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script> 
+
+		<!--<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script> 
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> --> <!-- Comment out (or don't include) services you don't want to use -->
+
+		<script src="Firebase-WebApp.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="jquery.easypiechart.js"></script>
+
+
+
+
+
+	<title>home page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body><header>
+		<nav>
+			<h1>Green House</h1>
+			<ul id="nav">
+				<li><a class="homered" href="newhome.html">HOME</a></li>
+				<li><a class="homeblack" href="aboutus.html">ABOUT PLANTS</a></li>
+				<li><a class="homeblack" href="appliance.html">APPLIANCES</a></li>
+				<li><a class="homeblack" href="contact.html">CONTACT</a></li>
+				<li><a class="homeblack" href="ourwork.html">OUR WORK</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+	<div class="divider"></div>
+
+	
+
+
+
+
+
+
+</div>
+
+<div id="main">
+	<section class="maindes">
+	<div class="border">
+		<article>
+			Welc<img src="heart.svg">me To
+			 GreenHouse
+			<br>
+			<a href="contact.html">make an enquiry</a>
+
+		</article>
+		<a id="scroll-down" href="#currentfield"><img src="arrow-down.svg"></a>
+		<a id="buttongreenhouse" href="ourwork.html">view greenhouse</a>
+
+		</div>
+
+
+	</section></div>
+		
+<h1 class="cur">CURRENT GREENHOUSE ENVIRONMENT</h1>
+<section id="currentfield">
+
+<div class="showpie">
+<h2 class="des">Current GreenHouse Environment</h2>
+<div class="tempread">
+		<div class="temp1">
+			<div class="chart" data-percent="73">73% Temperature</div>
+		</div>
+		<div class="temp1">
+			<div class="chart" data-percent="85">85% Humidity</div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+	$('.chart').easyPieChart({
+
+
+});
+});
+
+	Humid();
+  			
+  			function Humid(){
+  				console.log("Reached Humid");
+				var rootRef = firebase.database().ref('Sensors').child('Humidity');
+				rootRef.on("value",readHumidSnapshotFromFirebase);
+
+  			}
+
+
+			function displayData(Humid) {
+				console.log(" Changing #Humid Content of Html");
+				$("#Humid").text(Humid);
+			}
+
+			function readHumidSnapshotFromFirebase(snap) {
+					console.log("hello");
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					
+					$("#Humid").text(childsnap.val());
+					
+					var date =childsnap.key;
+					console.log("hello1");
+				
+
+					console.log("data:"+ data);
+
+			
+			});
+		}
+
+
+
+	</script>
+</div>
+</div>
+</section>
+
+
+<section class="green-panel">
+		<div class="wrapper">
+			<h1>Looking for A GreenHouse?</h1>
+			<p>Then Iot based Intelligent GreenHouse is for you!<br>It will save your time and energy...</p>
+			<a class="transparent" href="newhome.html">VIEW WEBSITE</a>
+		</div>
+	</section>
+
+<footer>
+	<section class="info">
+		<div class="wrap">
+	<div class="text">
+		<h3 class="text1">GET IN TOUCH</h3>
+		<h4 class="p">If you would like to discuss our project, drop us a line or come and visit us.</h4>
+		<article class="links">
+			<a class="transparent" href="https://mail.google.com">E-MAIL US</a>
+		
+			  	<a class="transparent">+92 21 34988000</a>
+			  </article>
+			  <div class="address"><p>Sir Syed University Of Engineering And Technology</p></div>
+				    
+	</div> 
+			<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4799600715633!2d67.09062781462059!3d24.915714349177787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1541174672502" width="100%" height="100%" style="border:none;">...</iframe>
+				</div>
+				
+			</div>
+		</section>
+	
+				
+			</div>
+		</div>
+	</section>
+</footer>		
+
+	
+</div></div>
+	</body>
+	</html>
+	<!--
+	<div class="tempread">
+		<div class="temp1">
+			<div class="chart" data-percent="73">73%</div>
+		</div>
+		<div class="temp1">
+			<div class="chart" data-percent="85">85%</div>
+		</div>
+		<div class="temp1">
+			<div class="chart" data-percent="90">90%</div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+	$('.chart').easyPieChart({
+
+
+});
+});
+	</script>
+	<!--<div id="sidebar">
+	<video width="250"controls>
+		<source src="video.mp4" type="video/mp4">
+	</video>

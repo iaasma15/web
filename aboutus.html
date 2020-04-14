@@ -1,0 +1,350 @@
+<html>
+<head>
+	<title>about us</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> 
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script> 
+	<script src="Firebase-WebApp.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" /> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+	<header>
+		<nav>
+			<h1>GREEN HOUSE</h1>
+			<ul id="nav">
+				<li><a class="homeblack" href="newhome.html">HOME</a></li>
+				<li><a class="homered" href="aboutus.html">ABOUT PLANTS</a></li>
+				<li><a class="homeblack" href="appliance.html">APPLIANCES</a></li>
+				<li><a class="homeblack" href="contact.html">CONTACT</a></li>
+				<li><a class="homeblack" href="ourwork.html">OUR WORK</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="divider"></div>
+		
+		<section class= "serv">
+			<div class="curser">
+		
+		<a id="view" href="#services-brand">Plant 1 Environment</a>
+			
+
+
+	<div class="textOverImage"
+	style="background-image:url(tom.jpg)"
+	data-text="plant specification
+	sbvdhdgasjhdgjhasdgasjh"></div></div>
+
+	<div class="curser1">
+	<a id="view1" href="pl2.html">Plant 2 Environment</a>
+
+
+	<div class="textOverImage"
+	style="background-image:url(image/Top-25-Most-Beautiful-Daisy-Flowers.jpg)"
+	data-text="plant specification
+	dbjhfsdjhhfsdj"></div></div>
+
+	<div class="curser2">
+	<a id="view2" href="pl3.html">Plant 3 Environment</a>
+	<div class="textOverImage"
+	style="background-image:url(image/iconic-flowers-garden-olympics-gettyimages-dogwood.jpg)"
+	data-text="plant specification
+	dbjhfsdjhhfsdj"></div></div></section>
+	
+
+	<section id="services-brand" class="purple-panel services-inside-panel">
+		<div class="wrapper">
+			<div class="text-services">
+
+<h2> PLANT 1 ENVIRONMENT ANALYSIS</h2>
+	<table width="100%" cellpadding="5" cellspacing="5" border="3" bordercolor="black" height="30%" position="absolute">
+		<tr>
+
+			<th>Readings</th>
+			<th>Time</th>
+			<th>Temperature</th>
+			<th>Humidity</th>
+			<th>Soil Moisture</th>
+			<th>WaterLevel</th>
+
+		</tr>
+		<tr>
+			<td bgcolor="transparent">Current</td>
+			<td id="Time"bgcolor="transparent"></td>
+			<td id="Temp" bgcolor="transparent"></td>
+			<td id="Humid" bgcolor="transparent"></td>
+			<td id="SoilMois" bgcolor="transparent"></td>
+			<td id="WaterLevel" bgcolor="transparent"></td>
+		</tr>
+		<tr>
+			<td bgcolor="transparent">To Maintain</td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+			<td bgcolor="lightgrey"></td>
+		</tr>
+		<tr>
+			<td bgcolor="transparent">Required for this plant</td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+			<td bgcolor="pink"></td>
+		</tr>
+	</table></div></div>
+	<div class="iii"></div>
+
+	<script >
+		console.log("Reached");
+		
+		Humid();
+		function Humid(){
+  				console.log("Reached Humid");
+				var rootRef = firebase.database().ref('Sensors').child('Humidity');
+				rootRef.on("value",readHumidSnapshotFromFirebase);
+
+  			}
+
+  			function displayData(Humid) {
+				console.log(" Changing #Humid Content of Html");
+				$("#Humid").text(Humid);
+
+				}
+
+			function readHumidSnapshotFromFirebase(snap) {
+					console.log("hello");
+			
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					
+					$("#Humid").text(childsnap.val());
+					var date =childsnap.key;
+					console.log("hello1");
+					
+
+					console.log("data:"+ data);
+			});
+		}
+
+
+
+		SoilMois();
+
+			function SoilMois(){
+  				console.log("Reached SoilMois");
+				var rootRef = firebase.database().ref('Sensors').child('SoilMois');
+				rootRef.on("value",readSoilMoisSnapshotFromFirebase);
+
+  			}
+
+			function displayData(SoilMois) {
+				console.log(" Changing #SoilMois Content of Html");
+				$("#SoilMois").text(SoilMois);
+			}
+
+			function readSoilMoisSnapshotFromFirebase(snap) {
+					console.log("hello");
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+				
+					$("#SoilMois").text(childsnap.val());
+					var date =childsnap.key;
+					console.log("hello1");
+					console.log("data:"+ data);
+
+			});
+		}
+
+
+
+Temp();
+
+
+			function Temp(){
+  				console.log("Reached Temp");
+				var rootRef = firebase.database().ref('Sensors').child('Temperature');
+				rootRef.on("value",readTempSnapshotFromFirebase);
+
+  			}
+
+			
+			function displayData(Temp) {
+				console.log(" Changing #Temp Content of Html");
+				$("#Temp").text(Temp);
+
+			}
+
+			function readTempSnapshotFromFirebase(snap) {
+					console.log("hello");
+			
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					
+					$("#Temp").text(childsnap.val());
+					
+					var date =childsnap.key;
+					console.log("hello1");
+					
+
+					console.log("data:"+ data);
+			
+
+			});
+		}
+
+
+
+
+				
+
+
+
+
+
+
+			WaterLevel();
+
+			
+			function WaterLevel(){
+  				console.log("Reached WaterLevel");
+				var rootRef = firebase.database().ref('Sensors').child('WaterLevel');
+				rootRef.on("value",readWaterLevelSnapshotFromFirebase);
+
+  			}
+
+			
+			function displayData(WaterLevel) {
+				console.log(" Changing #WaterLevel Content of Html");
+				$("#WaterLevel").text(WaterLevel);
+				
+			}
+
+			function readWaterLevelSnapshotFromFirebase(snap) {
+					console.log("hello");
+		
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+				
+					$("#WaterLevel").text(childsnap.val());
+					
+					var date =childsnap.key;
+					console.log("hello1");
+					console.log("data:"+ data);
+		
+
+			});
+		}
+
+
+			Time();
+
+			function Time(){
+  				console.log("Reached WaterLevel");
+				var rootRef = firebase.database().ref('Sensors').child('Humidity');
+				rootRef.on("value",readTimeSnapshotFromFirebase);
+
+  			}
+
+	
+			function displayData(Time) {
+				console.log(" Changing #Time Content of Html");
+				$("#Time").text(WaterLevel);
+				
+			}
+
+			function readTimeSnapshotFromFirebase(snap) {
+					console.log("hello");
+					snap.forEach(function(childsnap){
+					console.log("hello2");
+					
+					$("#Time").text(childsnap.val());
+					
+					var date =childsnap.key;
+					console.log("hello1");
+					
+					console.log("date"+ date);
+		
+
+			});
+		}
+
+
+
+
+
+
+			
+
+
+</script>
+
+			
+	</section>
+	<section class="green-panel">
+		<div class="wrapper">
+			<h1>Looking for A GreenHouse?</h1>
+			<p>Then Iot based Intelligent GreenHouse is for you!<br>It will save your time and energy...</p>
+			<a class="transparent" href="newhome.html">VIEW WEBSITE</a>
+		</div>
+	</section>
+
+
+	<footer>
+	<section class="info">
+		<div class="wrap">
+	<div class="text">
+		<h3 class="text1">GET IN TOUCH</h3>
+		<h4 class="p">If you would like to discuss our project, drop us a line or come and visit us.</h4>
+		<article class="links">
+			<a class="transparent" href="https://mail.google.com">E-MAIL US</a>
+		
+			  	<a class="transparent">+92 21 34988000</a>
+			  </article>
+			  <div class="address"><p>Sir Syed University Of Engineering And Technology</p></div>
+				    
+	</div> 
+			<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4799600715633!2d67.09062781462059!3d24.915714349177787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a0f2c3f3%3A0x4fc0a6fd386117f0!2sSir+Syed+University+of+Engineering+and+Technology!5e0!3m2!1sen!2s!4v1541174672502" width="100%" height="100%" style="border:none;">...</iframe>
+				</div>
+				
+			</div>
+		</section>
+	
+				
+			</div>
+		</div>
+	</section>
+</footer>		
+
+	
+
+
+
+
+</div></div>
+	
+
+
+</body>
+</html>
